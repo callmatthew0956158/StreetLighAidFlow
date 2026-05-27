@@ -14,8 +14,6 @@ public class Admin {
         while (attempts < MAX_ATTEMPTS) {
             int remaining = MAX_ATTEMPTS - attempts;
 
-            System.out.println("\n====== ADMIN LOGIN ======");
-
             if (attempts > 0) {
                 System.out.println("Invalid credentials. Attempts remaining: " + remaining);
             }
