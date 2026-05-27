@@ -24,7 +24,7 @@ public class StreetlighReport {
                 rs.getString("streetlight_id"),
                 rs.getString("location"),
                 rs.getString("reported_by"),
-                rs.getString("date-reported"),
+                rs.getString("date_reported"),
                 rs.getString("problem"),
                 rs.getString("status")
         );
