@@ -26,7 +26,7 @@ public class Main {
             
                 switch (choice) {
                     case "1":
-                        System.out.print("Enter StreetLight ID: ");
+                        System.out.print("Enter StreetLight ID(Example: SL1000): ");
                         String std = scanner.nextLine();
 
                         System.out.print("Enter Location: ");
