@@ -8,37 +8,26 @@ public class Admin {
         this.dbManager = dbManager;
     }
 
+   
     public boolean login(Scanner scanner) {
-        int attempts = 0;
-
-        while (attempts < MAX_ATTEMPTS) {
-            int remaining = MAX_ATTEMPTS - attempts;
-
-            if (attempts > 0) {
-                System.out.println("Invalid credentials. Attempts remaining: " + remaining);
-            }
-
-            System.out.print("Username: ");
+        for (int attempts = 0; attempts < MAX_ATTEMPTS; attempts++) {
+            System.out.print("Enter username: ");
             String username = scanner.nextLine();
-
-            System.out.print("Password: ");
+            System.out.print("Enter password: ");
             String password = scanner.nextLine();
 
             if (dbManager.authenticateAdmin(username, password)) {
-                System.out.println("Access granted. Welcome, " + username + "!");
+                System.out.println("Login successful! Welcome, " + username + "!");
                 return true;
             }
 
-            attempts++;
-
-            if (attempts == MAX_ATTEMPTS) {
-                System.out.println("Access denied. Maximum login attempts reached.");
-                System.out.println("The system will now exit.");
-                scanner.close();
-                System.exit(0); // Lock completely
+            int attemptsLeft = MAX_ATTEMPTS - (attempts + 1);
+            if (attemptsLeft > 0) {
+                System.out.println("Invalid credentials. Attempts remaining: " + attemptsLeft);
+            } else {
+                System.out.println("Too many failed attempts. Access locked.");
             }
         }
-
         return false;
     }
 }
