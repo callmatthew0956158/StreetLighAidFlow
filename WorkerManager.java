@@ -11,7 +11,7 @@ public class WorkerManager {
    
     public void assignWorker(Scanner scanner) {
 
-        // Step 1: Ask for streetlight ID
+        // Ask for streetlight ID
         System.out.print("\nEnter StreetLight ID to assign a worker: ");
         String streetlightId = scanner.nextLine().trim();
 
