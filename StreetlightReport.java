@@ -41,19 +41,27 @@ public class StreetlightReport {
     // GETTERS
     
     public String getStreetlight_id() { 
-        return streetlight_id; }
+        return streetlight_id;
+    }
     public String getLocation() { 
-        return location; }
-    public String getReported_by() { 
-        return reported_by; }
+        return location; 
+    }
+    public String getReported_by(){ 
+        return reported_by; 
+    }
     public String getDate_reported() { 
-        return date_reported; }
+        return date_reported; 
+    }
     public String getProblem() { 
-        return problem; }
+        return problem; 
+    }
     public String getStatus() { 
-        return status; }
+        return status; 
+    }
     public String getAssigned_worker() { 
-        return assigned_worker; }
+        return assigned_worker; 
+    }
     public double getRepair_cost() { 
-        return repair_cost; }
+        return repair_cost; 
+    }
 }

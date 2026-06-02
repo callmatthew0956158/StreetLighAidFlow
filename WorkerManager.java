@@ -72,13 +72,13 @@ public class WorkerManager {
 
     
         if (dbManager.assignWorker(streetlightId, selectedWorker, repairCost)) {
-            System.out.println("\n✔ Worker assigned successfully!");
+            System.out.println("\nWorker assigned successfully!");
             System.out.println("  Streetlight ID  : " + streetlightId);
             System.out.println("  Assigned Worker : " + selectedWorker);
             System.out.println("  Repair Cost     : PHP " + String.format("%.2f", repairCost));
             System.out.println("  Status updated  : Ongoing");
         } else {
-            System.out.println("✘ Failed to assign worker. Please try again.");
+            System.out.println("Failed to assign worker. Please try again.");
         }
     }
 }

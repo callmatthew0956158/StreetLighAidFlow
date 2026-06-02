@@ -51,10 +51,10 @@ public class Main {
                     String problem = selectProblem(scanner);
 
                     if (dbManager.addReport(std, location, reportedBy, problem)) {
-                        System.out.println("✔ Report added successfully.");
+                        System.out.println("Report added successfully.");
                         System.out.println("  Cost will be recorded when a worker is assigned.");
                     } else {
-                        System.out.println("✘ Failed to add report.");
+                        System.out.println("Failed to add report.");
                     }
                     break;
 
@@ -129,9 +129,9 @@ public class Main {
 
                     if (confirm.equals("yes") || confirm.equals("y")) {
                         if (dbManager.deleteReport(idToDelete)) {
-                            System.out.println("✔ Report [" + idToDelete + "] deleted successfully.");
+                            System.out.println(" Report [" + idToDelete + "] deleted successfully.");
                         } else {
-                            System.out.println("✘ No report found with ID: " + idToDelete);
+                            System.out.println("No report found with ID: " + idToDelete);
                         }
                     } else {
                         System.out.println("Delete cancelled.");
@@ -152,7 +152,7 @@ public class Main {
                     String costId = scanner.nextLine().trim();
 
                     if (!dbManager.reportExists(costId)) {
-                        System.out.println("✘ No report found with ID: " + costId);
+                        System.out.println(" No report found with ID: " + costId);
                         break;
                     }
 
@@ -173,10 +173,10 @@ public class Main {
                     }
 
                     if (dbManager.updateRepairCost(costId, newCost)) {
-                        System.out.println("✔ Repair cost of [" + costId + "] updated to: PHP " +
+                        System.out.println("Repair cost of [" + costId + "] updated to: PHP " +
                                 String.format("%.2f", newCost));
                     } else {
-                        System.out.println("✘ Failed to update cost.");
+                        System.out.println("Failed to update cost.");
                     }
                     break;
 

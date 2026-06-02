@@ -39,7 +39,7 @@ public class UpdateManager {
             case 2: status = "Ongoing";  break;
             case 3: status = "Repaired"; break;
             default:
-                System.out.println("✘ Invalid choice. Please enter 1, 2, or 3.");
+                System.out.println("Invalid choice. Please enter 1, 2, or 3.");
                 return;
         }
 
