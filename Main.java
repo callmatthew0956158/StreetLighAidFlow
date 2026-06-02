@@ -52,7 +52,7 @@ public class Main {
 
                     if (dbManager.addReport(std, location, reportedBy, problem)) {
                         System.out.println("Report added successfully.");
-                        System.out.println("  Cost will be recorded when a worker is assigned.");
+                        System.out.println("Cost will be recorded when a worker is assigned.");
                     } else {
                         System.out.println("Failed to add report.");
                     }
@@ -67,8 +67,8 @@ public class Main {
                 case "3":
                     System.out.println("\n====--- SEARCH REPORTS ---====");
                     System.out.println("Search by:");
-                    System.out.println("  1. Streetlight ID");
-                    System.out.println("  2. Date Range");
+                    System.out.println(" 1. Streetlight ID");
+                    System.out.println(" 2. Date Range");
                     System.out.print("Enter choice: ");
                     String searchChoice = scanner.nextLine().trim();
 
@@ -98,8 +98,8 @@ public class Main {
                 case "5":
                     System.out.println("\n====--- GENERATE REPORT ---====");
                     System.out.println("Report type:");
-                    System.out.println("  1. Overall Summary");
-                    System.out.println("  2. Summary by Date Range");
+                    System.out.println(" 1. Overall Summary");
+                    System.out.println(" 2. Summary by Date Range");
                     System.out.print("Enter choice: ");
                     String reportChoice = scanner.nextLine().trim();
 
@@ -261,9 +261,9 @@ public class Main {
                     System.out.print("Enter Contact Number: ");
                     String contact = scanner.nextLine().trim();
                     if (dbManager.addWorker(name, contact)) {
-                        System.out.println("✔ Worker [" + name + "] added successfully.");
+                        System.out.println("Worker [" + name + "] added successfully.");
                     } else {
-                        System.out.println("✘ Failed to add worker.");
+                        System.out.println("Failed to add worker.");
                     }
                     break;
                 case "3":
