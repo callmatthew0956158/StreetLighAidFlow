@@ -206,7 +206,7 @@ public class Main {
             "Light stays on during daytime",
             "Water damage / Flooding",
             "Animal damage",
-            "Vandalism / Theft",
+            "Theft",
             "Others"
         };
 
